@@ -244,13 +244,42 @@
                       </div>
                     </ul>
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item dropdown">
                     <a
                       class="nav-link"
-                      href="/gallery.html"
-                      aria-label="Browse our Gallery"
-                      >Gallery</a
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
+                      <span class="menu-link">GALLERY</span>
+                      <i class="fas fa-chevron-down ms-1 dropdown-arrow"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu mega-dropdown"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="dropdown-container">
+                        <div class="dropdown-column">
+                          <h5 class="dropdown-header">GALLERY</h5>
+                          <a
+                            class="dropdown-item"
+                            href="/gallery/nailgallery.html"
+                          >
+                            <i class="fa-solid fa-hand-sparkles me-2"></i
+                            >Manicure & Pedicure GALLERY
+                          </a>
+                          <a
+                            class="dropdown-item"
+                            href="/gallery/eyegallery.html"
+                          >
+                            <i class="fa-solid fa-eye me-2"></i>Eye & Waxing
+                            GALLERY
+                          </a>
+                        </div>
+                      </div>
+                    </ul>
                   </li>
 
                   <li class="nav-item">
@@ -336,22 +365,24 @@
     <section id="pricing" class="pricing py-4 section bg-lanail">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <div class="h2">Our Services</div>
+        <div class="h2">Manicure & Pedicure</div>
       </div>
       <!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 gx-lg-5">
           <!-- Detailed Manicure Services -->
-          <div class="col-lg-12">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
+          <div class="col-12">
+            <div class="pricing-item">
+              <div class="d-flex flex-sm-row flex-column gap-3">
+                <!-- Ảnh sẽ hiển thị trên đầu khi màn hình nhỏ -->
                 <img
                   src="/images/nailImage/services/Service1.jpg"
                   alt="Manicure Services"
-                  class="img-thumbnail me-3"
+                  class="img-thumbnail flex-shrink-0"
                   style="width: 200px; height: 200px; object-fit: cover"
                 />
+                <!-- Nội dung sẽ xuống dưới ảnh khi màn hình nhỏ -->
                 <div>
                   <h3>Manicure Services</h3>
                   <ul class="service-details">
@@ -369,12 +400,12 @@
 
           <!-- Pedicure Services -->
           <div class="col-lg-12">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
+            <div class="pricing-item">
+              <div class="d-flex flex-sm-row flex-column gap-3">
                 <img
                   src="/images/nailImage/services/Service7.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
+                  alt="Pedicure Services"
+                  class="img-thumbnail flex-shrink-0"
                   style="width: 200px; height: 200px; object-fit: cover"
                 />
                 <div>
@@ -398,12 +429,12 @@
 
           <!-- Kids Services -->
           <div class="col-lg-12">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
+            <div class="pricing-item">
+              <div class="d-flex flex-sm-row flex-column gap-3">
                 <img
                   src="/images/nailImage/services/Service5.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
+                  alt="Kids Services"
+                  class="img-thumbnail flex-shrink-0"
                   style="width: 200px; height: 200px; object-fit: cover"
                 />
                 <div>
