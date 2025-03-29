@@ -47,7 +47,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -59,10 +59,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="icon" href="images/nailImage/logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="images/nailImage/logo.png" />
+    <link rel="icon" href="/images/nailImage/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/nailImage/logo.png" />
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -144,10 +144,10 @@
           <div class="col-auto">
             <a
               class="navbar-brand d-flex align-items-center text-white fs-1"
-              href="index.html"
+              href="/index.html"
             >
               <img
-                src="images/nailImage/logo.png"
+                src="/images/nailImage/logo.png"
                 alt="LA Nails Logo"
                 class="me-3 rounded-circle"
                 style="height: 50px; width: 50px; object-fit: cover"
@@ -175,7 +175,12 @@
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <h5
+                  class="offcanvas-title text-black"
+                  id="offcanvasNavbarLabel"
+                >
+                  Menu
+                </h5>
                 <button
                   type="button"
                   class="btn-close text-reset"
@@ -191,39 +196,68 @@
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="index.html"
+                      href="/index.html"
                       aria-label="Go to Home page"
                       >Home</a
                     >
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item dropdown">
                     <a
                       class="nav-link"
-                      href="service.html"
-                      aria-label="View our Services"
-                      >Services</a
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
+                      <span class="menu-link">SERVICES</span>
+                      <i class="fas fa-chevron-down ms-1 dropdown-arrow"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu mega-dropdown"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="dropdown-container">
+                        <div class="dropdown-column">
+                          <h5 class="dropdown-header">NAIL SERVICES</h5>
+                          <a
+                            class="dropdown-item"
+                            href="/services/manicure.html"
+                          >
+                            <i class="fa-solid fa-hand-sparkles me-2"></i
+                            >Manicure & Pedicure Services
+                          </a>
+                          <a
+                            class="dropdown-item"
+                            href="/services/eyewaxing.html"
+                          >
+                            <i class="fa-solid fa-eye me-2"></i>Eye & Waxing
+                            Services
+                          </a>
+                          <a
+                            class="dropdown-item"
+                            href="/services/acrylic.html"
+                          >
+                            <i class="fas fa-gem me-2"></i>Acrylic & Dipping
+                            Powder Services
+                          </a>
+                        </div>
+                      </div>
+                    </ul>
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="gallery.html"
+                      href="/gallery.html"
                       aria-label="Browse our Gallery"
                       >Gallery</a
                     >
                   </li>
+
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="about.html"
-                      aria-label="Learn About Us"
-                      >About</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="contact.html"
+                      href="/contact.html"
                       aria-label="Contact Us"
                       >Contact</a
                     >
@@ -284,7 +318,7 @@
       style="margin-top: 90px"
     >
       <img
-        src="images/nailImage/spa/BackgroundNail.png"
+        src="/images/nailImage/spa/BackgroundNail.png"
         alt="Banner background"
         class="banner-bg img-fluid w-100"
       />
@@ -293,8 +327,8 @@
       >
         <h1 class="banner-title">Services</h1>
         <p class="banner-breadcrumb">
-          <span class="text-white"> Home /</span>
-          <a href="#" class="text-info text-decoration-none"> Services</a>
+          <span class="text-white"> Services /</span>
+          <a href="#" class="text-info text-decoration-none"> Eye & Washing</a>
         </p>
       </div>
     </div>
@@ -307,123 +341,15 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4 gx-lg-5">
-          <!-- Detailed Manicure Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service1.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Manicure Services</h3>
-                  <ul class="service-details">
-                    <li>Manicure : $30</li>
-                    <li>Manicure + Color Gel Polish : $37</li>
-                    <li>French : $5 (add-on)</li>
-                    <li>Manicure + Clear Gel Polish : $35</li>
-                    <li>Gel Polish Change : $25</li>
-                    <li>Nails Polish : $20</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pedicure Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service7.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Pedicure Services</h3>
-                  <ul class="service-details">
-                    <li>Spa Pedicure : $45</li>
-                    <li>Spa Pedicure + Gel Polish : $50</li>
-                    <li>Deluxe Pedicure : $60</li>
-                    <li>Deluxe Pedicure + Gel Polish : $70</li>
-                    <li>Kid Pedicure (10-12) : $35</li>
-                    <li>Kid Pedicure + Gel (10-12) : $45</li>
-                    <li>Gel Polish Change : $25</li>
-                    <li>Toe Polish : $20</li>
-                    <li>Pedi w/ Full Set : $90</li>
-                    <li>Pedi with Fill : $80</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Acrylic Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service8.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Acrylic Services</h3>
-                  <ul class="service-details">
-                    <li>Full Set : $50(price may vary)</li>
-                    <li>Coffin Full Set : $45(price may vary)</li>
-                    <li>Full Set + Gel : $50(price may vary)</li>
-                    <li>Fill-in : $40(price may vary)</li>
-                    <li>Fill-in + Gel : $40(price may vary)</li>
-                    <li>Gel Polish on Acrylic : $30(price may vary)</li>
-                    <li>Color Acrylic Full Set : $50(price may vary)</li>
-                    <li>Color Acrylic Fill : $40(price may vary)</li>
-                    <li>Ombre Pink & White : $65(price may vary)</li>
-                    <li>Gel Change on Acrylic : $25(price may vary)</li>
-                    <li>Special Shapes : $10(price may vary)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dipping Powder Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service2.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Dipping Service</h3>
-                  <ul class="service-details">
-                    <li>Dipping : $50</li>
-                    <li>Dip w/ Tip : $55(price may vary)</li>
-                    <li>Dip French : $57</li>
-                    <li>Dipping Powder : $45</li>
-
-                    <li>Dipping with Manicure : $55</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
           <!-- Lashes Services -->
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="pricing-item d-flex justify-content-between">
               <div class="d-flex">
                 <img
-                  src="images/nailImage/services/Service3.jpg"
+                  src="/images/nailImage/services/Service3.jpg"
                   alt="Manicure Services"
                   class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
+                  style="width: 200px; height: 200px; object-fit: cover"
                 />
                 <div>
                   <h3>Eyelash Services</h3>
@@ -443,14 +369,14 @@
           </div>
 
           <!-- Waxing Services -->
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="pricing-item d-flex justify-content-between">
               <div class="d-flex">
                 <img
-                  src="images/nailImage/services/Service4.jpg"
+                  src="/images/nailImage/services/Service4.jpg"
                   alt="Manicure Services"
                   class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
+                  style="width: 200px; height: 200px; object-fit: cover"
                 />
                 <div>
                   <h3>Waxing Services</h3>
@@ -463,60 +389,6 @@
                     <li>Full Face : $40</li>
                     <li>Underarm : $25</li>
                     <li>Leg : $45+</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Additional Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service6.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Add on services</h3>
-                  <ul class="service-details">
-                    <li>Soak Off Acrylic : $18</li>
-                    <li>Soak Acrylic + Gel : $30</li>
-                    <li>Cut Down : $5</li>
-                    <li>Reshape : $5</li>
-                    <li>Nail Repair + Gel : $7(price may vary)</li>
-                    <li>Acrylic on 2 Big Toes : $16</li>
-                    <li>Acrylic Fill on Big Toes : $12</li>
-                    <li>Nails Art : 2 for $6</li>
-                    <li>Full Hand Design : $20(price may vary)</li>
-                    <li>Gem Stones : $10(price may vary)</li>
-                    <li>French Tip : $7</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Kids Services -->
-          <div class="col-lg-6">
-            <div class="pricing-item d-flex justify-content-between">
-              <div class="d-flex">
-                <img
-                  src="images/nailImage/services/Service5.jpg"
-                  alt="Manicure Services"
-                  class="img-thumbnail me-3"
-                  style="width: 150px; height: 150px; object-fit: cover"
-                />
-                <div>
-                  <h3>Kids Services</h3>
-                  <ul class="service-details">
-                    <li>Princess Gel Nails & Toes : $50</li>
-                    <li>Spa Pedicure : $25</li>
-                    <li>Spa Pedicure with Gel : $35</li>
-                    <li>Gel Nails Polish : $15</li>
-                    <li>Gel on Nails & Toes : $30</li>
                   </ul>
                 </div>
               </div>
@@ -537,7 +409,7 @@
                 Book an appointment today and experience the La Nails
                 difference!
               </p>
-              <a href="contact.html" class="btn fs-5 btn-success px-4 py-2"
+              <a href="/contact.html" class="btn fs-5 btn-success px-4 py-2"
                 >Contact Us</a
               >
             </div>
@@ -632,8 +504,8 @@
           <div class="col-12 col-md-6 col-lg-3 mb-4">
             <div class="footer-menu">
               <div class="footer-intro mb-4">
-                <a href="index.html">
-                  <img src="images/nailImage/logo.png" alt="La Nails Logo" />
+                <a href="/index.html">
+                  <img src="/images/nailImage/logo.png" alt="La Nails Logo" />
                 </a>
               </div>
               <p>
@@ -680,10 +552,11 @@
             <div class="footer-menu">
               <h5 class="widget-title text-uppercase mb-4">Quick Links</h5>
               <ul class="list-unstyled">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
               </ul>
             </div>
           </div>
@@ -696,6 +569,10 @@
               <p><strong>La Nails</strong></p>
               <p>22686 Shore Center Dr, Euclid, OH 44123, USA</p>
               <p>Phone: <a href="tel:+12167971711">+1 (216) 797-1711</a></p>
+              <p class="fs-6">
+                <strong>(Note:</strong> We only accept walk-ins. No online
+                booking available)
+              </p>
               <p>
                 Email: <a href="mailto:info@lanails.com">info@lanails.com</a>
               </p>
@@ -756,16 +633,16 @@
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
     </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/SmoothScroll.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/SmoothScroll.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="/js/script.min.js"></script>
     <script>
       // Lắng nghe sự kiện khi offcanvas được show/hide
       document.addEventListener("DOMContentLoaded", function () {

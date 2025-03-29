@@ -47,7 +47,7 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="css/vendor.css" />
+    <link rel="stylesheet" type="text/css" href="/css/vendor.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -59,10 +59,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
-    <link rel="icon" href="images/nailImage/logo.png" type="image/png" />
-    <link rel="apple-touch-icon" href="images/nailImage/logo.png" />
+    <link rel="icon" href="/images/nailImage/logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/nailImage/logo.png" />
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -72,10 +72,70 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://lanails.com" />
   </head>
+  <style>
+    .service-details {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    .service-details li {
+      padding: 3px 0;
+      border-bottom: 1px dashed #eee;
+    }
+    .pricing-item {
+      padding: 20px;
+      margin-bottom: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    .pricing-item:hover {
+      transform: translateY(-5px);
+    }
+    .pricing .pricing-item {
+      width: 100%;
+      height: 100%;
+      padding: 15px 0;
+      transition: all 0.3s ease;
+    }
 
+    .pricing .pricing-item:hover {
+      transform: translateX(5px);
+    }
+
+    .pricing .pricing-item h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .pricing .pricing-item:hover h3 {
+      color: var(--accent-color);
+    }
+
+    .pricing .pricing-item h4 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+
+    .pricing .pricing-item .img-thumbnail {
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing .pricing-item:hover .img-thumbnail {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
   <body class="homepage">
     <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
-    <!-- Navbar -->
+
     <nav
       class="navbar navbar-expand-lg fixed-top bg-luxury text-white text-uppercase fs-6 p-3 align-items-center"
     >
@@ -84,10 +144,10 @@
           <div class="col-auto">
             <a
               class="navbar-brand d-flex align-items-center text-white fs-1"
-              href="index.html"
+              href="/index.html"
             >
               <img
-                src="images/nailImage/logo.png"
+                src="/images/nailImage/logo.png"
                 alt="LA Nails Logo"
                 class="me-3 rounded-circle"
                 style="height: 50px; width: 50px; object-fit: cover"
@@ -115,7 +175,12 @@
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <h5
+                  class="offcanvas-title text-black"
+                  id="offcanvasNavbarLabel"
+                >
+                  Menu
+                </h5>
                 <button
                   type="button"
                   class="btn-close text-reset"
@@ -131,39 +196,68 @@
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="index.html"
+                      href="/index.html"
                       aria-label="Go to Home page"
                       >Home</a
                     >
                   </li>
-                  <li class="nav-item">
+                  <li class="nav-item dropdown">
                     <a
                       class="nav-link"
-                      href="service.html"
-                      aria-label="View our Services"
-                      >Services</a
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
+                      <span class="menu-link">SERVICES</span>
+                      <i class="fas fa-chevron-down ms-1 dropdown-arrow"></i>
+                    </a>
+                    <ul
+                      class="dropdown-menu mega-dropdown"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <div class="dropdown-container">
+                        <div class="dropdown-column">
+                          <h5 class="dropdown-header">NAIL SERVICES</h5>
+                          <a
+                            class="dropdown-item"
+                            href="/services/manicure.html"
+                          >
+                            <i class="fa-solid fa-hand-sparkles me-2"></i
+                            >Manicure & Pedicure Services
+                          </a>
+                          <a
+                            class="dropdown-item"
+                            href="/services/eyewaxing.html"
+                          >
+                            <i class="fa-solid fa-eye me-2"></i>Eye & Waxing
+                            Services
+                          </a>
+                          <a
+                            class="dropdown-item"
+                            href="/services/acrylic.html"
+                          >
+                            <i class="fas fa-gem me-2"></i>Acrylic & Dipping
+                            Powder Services
+                          </a>
+                        </div>
+                      </div>
+                    </ul>
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="gallery.html"
+                      href="/gallery.html"
                       aria-label="Browse our Gallery"
                       >Gallery</a
                     >
                   </li>
+
                   <li class="nav-item">
                     <a
                       class="nav-link"
-                      href="about.html"
-                      aria-label="Learn About Us"
-                      >About</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link"
-                      href="contact.html"
+                      href="/contact.html"
                       aria-label="Contact Us"
                       >Contact</a
                     >
@@ -224,87 +318,118 @@
       style="margin-top: 90px"
     >
       <img
-        src="images/nailImage/spa/BackgroundNail.png"
+        src="/images/nailImage/spa/BackgroundNail.png"
         alt="Banner background"
         class="banner-bg img-fluid w-100"
       />
       <div
         class="banner-overlay position-absolute top-50 start-50 translate-middle text-center px-3"
       >
-        <h1 class="banner-title">About</h1>
+        <h1 class="banner-title">Services</h1>
         <p class="banner-breadcrumb">
-          <span class="text-white"> Home /</span>
-          <a href="#" class="text-info text-decoration-none"> About</a>
+          <span class="text-white"> Services /</span>
+          <a href="#" class="text-info text-decoration-none">
+            Acrylic & Dipping Powder</a
+          >
         </p>
       </div>
     </div>
-    <!-- About Content -->
-    <section class="py-5 bg-lanail">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4">
-            <img
-              src="https://i.pinimg.com/736x/67/fd/28/67fd28ef0cc0c34f516e2ec917f5ece7.jpg"
-              alt="Nail Salon Interior"
-              class="img-fluid rounded shadow"
-            />
+    <section id="pricing" class="pricing py-4 section bg-lanail">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <div class="h2">Our Services</div>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4 gx-lg-5">
+          <!-- Acrylic Services -->
+          <div class="col-lg-12">
+            <div class="pricing-item d-flex justify-content-between">
+              <div class="d-flex">
+                <img
+                  src="/images/nailImage/services/Service8.jpg"
+                  alt="Manicure Services"
+                  class="img-thumbnail me-3"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                />
+                <div>
+                  <h3>Acrylic Services</h3>
+                  <ul class="service-details">
+                    <li>Full Set : $50(price may vary)</li>
+                    <li>Coffin Full Set : $45(price may vary)</li>
+                    <li>Full Set + Gel : $50(price may vary)</li>
+                    <li>Fill-in : $40(price may vary)</li>
+                    <li>Fill-in + Gel : $40(price may vary)</li>
+                    <li>Gel Polish on Acrylic : $30(price may vary)</li>
+                    <li>Color Acrylic Full Set : $50(price may vary)</li>
+                    <li>Color Acrylic Fill : $40(price may vary)</li>
+                    <li>Ombre Pink & White : $65(price may vary)</li>
+                    <li>Gel Change on Acrylic : $25(price may vary)</li>
+                    <li>Special Shapes : $10(price may vary)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 text-luxury">
-            <h2 class="fw-bold mb-4 text-luxury">Our Story</h2>
-            <p>
-              Founded in 2015, LA NAILS has been dedicated to providing
-              luxurious and hygienic nail care services. Our passion for nail
-              art and customer satisfaction drives us to stay ahead of trends
-              while maintaining a relaxing environment.
-            </p>
-            <p>
-              We use only premium, non-toxic products and sterilized tools to
-              ensure your safety and comfort.
-            </p>
+
+          <!-- Dipping Powder Services -->
+          <div class="col-lg-12">
+            <div class="pricing-item d-flex justify-content-between">
+              <div class="d-flex">
+                <img
+                  src="/images/nailImage/services/Service2.jpg"
+                  alt="Manicure Services"
+                  class="img-thumbnail me-3"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                />
+                <div>
+                  <h3>Dipping Service</h3>
+                  <ul class="service-details">
+                    <li>Dipping : $50</li>
+                    <li>Dip w/ Tip : $55(price may vary)</li>
+                    <li>Dip French : $57</li>
+                    <li>Dipping Powder : $45</li>
+
+                    <li>Dipping with Manicure : $55</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Additional Services -->
+          <div class="col-lg-12">
+            <div class="pricing-item d-flex justify-content-between">
+              <div class="d-flex">
+                <img
+                  src="/images/nailImage/services/Service6.jpg"
+                  alt="Manicure Services"
+                  class="img-thumbnail me-3"
+                  style="width: 200px; height: 200px; object-fit: cover"
+                />
+                <div>
+                  <h3>Add on services</h3>
+                  <ul class="service-details">
+                    <li>Soak Off Acrylic : $18</li>
+                    <li>Soak Acrylic + Gel : $30</li>
+                    <li>Cut Down : $5</li>
+                    <li>Reshape : $5</li>
+                    <li>Nail Repair + Gel : $7(price may vary)</li>
+                    <li>Acrylic on 2 Big Toes : $16</li>
+                    <li>Acrylic Fill on Big Toes : $12</li>
+                    <li>Nails Art : 2 for $6</li>
+                    <li>Full Hand Design : $20(price may vary)</li>
+                    <li>Gem Stones : $10(price may vary)</li>
+                    <li>French Tip : $7</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Mission Section -->
-    <section class="mission-section py-5 bg-none">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 order-lg-2 mb-4">
-            <img
-              src="https://i.pinimg.com/736x/8d/ba/98/8dba98470f823f8bc65f81a8b381c946.jpg"
-              alt="Nail Artist"
-              class="img-fluid rounded shadow"
-            />
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <h2 class="fw-bold mb-4">Our Mission</h2>
-            <p>
-              To empower self-expression through stunning nail designs while
-              prioritizing hygiene, creativity, and exceptional customer
-              service.
-            </p>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="fas fa-check-circle text-primary me-2"></i>100%
-                Sanitary Tools
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-check-circle text-primary me-2"></i
-                >Eco-Friendly Products
-              </li>
-              <li class="mb-2">
-                <i class="fas fa-check-circle text-primary me-2"></i>Custom Nail
-                Art
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section id="services-highlight" class="py-5 bg-lanail">
+    <section id="services-highlight" class="py-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-10">
@@ -316,7 +441,7 @@
                 Book an appointment today and experience the La Nails
                 difference!
               </p>
-              <a href="contact.html" class="btn fs-5 btn-success px-4 py-2"
+              <a href="/contact.html" class="btn fs-5 btn-success px-4 py-2"
                 >Contact Us</a
               >
             </div>
@@ -324,8 +449,86 @@
         </div>
       </div>
     </section>
+    <section class="testimonials py-5 bg-lanail">
+      <div class="section-header text-center mt-5">
+        <h2 class="text-luxury section-title text-uppercase text-primary">
+          What Our Clients Say
+        </h2>
+        <p class="text-muted">
+          Real reviews from our happy customers at LA Nails Spa in Euclid
+        </p>
+      </div>
 
-    <!-- Footer -->
+      <div class="swiper testimonial-swiper overflow-hidden my-5">
+        <div class="swiper-wrapper d-flex">
+          <div class="swiper-slide">
+            <div class="testimonial-item text-center">
+              <blockquote class="fs-4">
+                <p>
+                  "Absolutely love my nails! The staff at LA Nails was super
+                  friendly, and the attention to detail was amazing. My gel
+                  manicure lasted over two weeks without chipping."
+                </p>
+                <div class="review-title text-uppercase text-warning">
+                  Emily R. - Euclid, OH
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item text-center">
+              <blockquote class="fs-4">
+                <p>
+                  "The best nail salon I've been to in the Cleveland area! The
+                  salon is spotlessly clean, and the designs are stunning. Their
+                  pedicure chairs are so comfortable, and the service is
+                  consistently excellent."
+                </p>
+                <div class="review-title text-uppercase text-warning">
+                  Sophia L. - Cleveland, OH
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item text-center">
+              <blockquote class="fs-4">
+                <p>
+                  "My pedicure at LA Nails was so relaxing! The team here is
+                  professional and really cares about their customers. I've been
+                  coming here for over a year and have never been disappointed."
+                </p>
+                <div class="review-title text-uppercase text-warning">
+                  Jessica T. - Euclid, OH
+                </div>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-item text-center">
+              <blockquote class="fs-4">
+                <p>
+                  "Highly recommend LA Nails Spa in Euclid! They offer the best
+                  nail art in the area, and my manicure lasted for weeks. The
+                  staff is attentive and always makes sure I'm completely
+                  satisfied."
+                </p>
+                <div class="review-title text-uppercase text-warning">
+                  Anna P. - Lakewood, OH
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="testimonial-swiper-pagination d-flex justify-content-center mb-5"
+      ></div>
+    </section>
     <footer id="footer" class="mt-5">
       <div class="container">
         <div class="row d-flex flex-wrap justify-content-between py-5">
@@ -333,8 +536,8 @@
           <div class="col-12 col-md-6 col-lg-3 mb-4">
             <div class="footer-menu">
               <div class="footer-intro mb-4">
-                <a href="index.html">
-                  <img src="images/nailImage/logo.png" alt="La Nails Logo" />
+                <a href="/index.html">
+                  <img src="/images/nailImage/logo.png" alt="La Nails Logo" />
                 </a>
               </div>
               <p>
@@ -381,10 +584,10 @@
             <div class="footer-menu">
               <h5 class="widget-title text-uppercase mb-4">Quick Links</h5>
               <ul class="list-unstyled">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About Us</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/gallery.html">Gallery</a></li>
               </ul>
             </div>
           </div>
@@ -397,6 +600,10 @@
               <p><strong>La Nails</strong></p>
               <p>22686 Shore Center Dr, Euclid, OH 44123, USA</p>
               <p>Phone: <a href="tel:+12167971711">+1 (216) 797-1711</a></p>
+              <p class="fs-6">
+                <strong>(Note:</strong> We only accept walk-ins. No online
+                booking available)
+              </p>
               <p>
                 Email: <a href="mailto:info@lanails.com">info@lanails.com</a>
               </p>
@@ -457,16 +664,16 @@
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
     </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/SmoothScroll.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/SmoothScroll.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="js/script.min.js"></script>
+    <script src="/js/script.min.js"></script>
     <script>
       // Lắng nghe sự kiện khi offcanvas được show/hide
       document.addEventListener("DOMContentLoaded", function () {
