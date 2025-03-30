@@ -1,0 +1,9 @@
+# Allow all search engines to index the entire site
+User-agent: *
+Disallow:
+
+# Block specific pages or directories
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/

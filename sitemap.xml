@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://lanailsspa.com/</loc>
+    <lastmod>2024-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://lanailsspa.com/contact</loc>
+    <lastmod>2024-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Nail Gallery -->
+  <url>
+    <loc>https://lanailsspa.com/gallery/nailgallery</loc>
+    <lastmod>2024-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Eye Gallery -->
+  <url>
+    <loc>https://lanailsspa.com/gallery/eyegallery</loc>
+    <lastmod>2024-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Acrylic & Dipping Powder -->
+  <url>
+    <loc>https://lanailsspa.com/services/acrylic</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Eyelashes & Waxing -->
+  <url>
+    <loc>https://lanailsspa.com/services/eyewaxing</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Pedicure & Manicure -->
+  <url>
+    <loc>https://lanailsspa.com/services/manicure</loc>
+    <lastmod>2024-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
