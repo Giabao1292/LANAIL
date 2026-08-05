@@ -520,6 +520,79 @@
       </div>
     </section>
 
+    <section id="booking-early-access" class="py-5 bg-light border-bottom">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill">✨ Help Us Improve</span>
+            <h2 class="text-luxury fw-normal mb-3">Online Booking Plan</h2>
+            <p class="text-secondary mb-4">
+              We are planning to develop an <strong>online appointment</strong> feature. By leaving your email below to show your interest, you greatly help us improve our services for you!
+            </p>
+
+            <!-- Success Message -->
+            <div id="survey-success" class="alert alert-success" style="display: none;">
+              🎉 <strong>Thank you!</strong> We will notify you as soon as online booking is available. <br>
+              <em class="mt-2 d-block">In the meantime, please call us at <strong>+1 (216) 797-1711</strong> to book your appointment.</em>
+            </div>
+
+            <!-- Error Message -->
+            <div id="survey-error" class="alert alert-danger" style="display: none;">
+              ❌ Oops, something went wrong. Please try again later.
+            </div>
+
+            <!-- Form -->
+            <form id="appointment-survey-form" action="https://formspree.io/f/mzeppnne" method="POST" class="d-flex flex-column align-items-center mt-4">
+              <div class="d-flex flex-column flex-md-row gap-2 mb-2 w-100" style="max-width: 600px;">
+                <input type="email" name="email" class="form-control px-4 py-3 border-dark" placeholder="Enter your email address..." required />
+                <button type="submit" id="survey-submit-btn" class="btn btn-dark px-4 py-3 fw-bold text-uppercase flex-shrink-0">Get Early Access</button>
+              </div>
+              <small class="text-muted">* We promise not to spam your inbox.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JS cho Form (Đặt ở đây hoặc dời xuống cuối trang) -->
+    <script>
+      const form = document.getElementById("appointment-survey-form");
+      const successMsg = document.getElementById("survey-success");
+      const errorMsg = document.getElementById("survey-error");
+      const submitBtn = document.getElementById("survey-submit-btn");
+
+      if (form) {
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Sending...";
+          
+          const data = new FormData(form);
+          try {
+            const response = await fetch(form.action, {
+              method: form.method,
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
+            
+            if (response.ok) {
+              form.style.display = "none";
+              successMsg.style.display = "block";
+            } else {
+              errorMsg.style.display = "block";
+              submitBtn.disabled = false;
+              submitBtn.innerText = "Try again";
+            }
+          } catch (error) {
+            errorMsg.style.display = "block";
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Try again";
+          }
+        });
+      }
+    </script>
+
     <section id="premium-services" class="py-5 bg-lanail">
       <div class="container">
         <div class="row">
